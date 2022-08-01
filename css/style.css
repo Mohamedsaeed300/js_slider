@@ -1,0 +1,99 @@
+/* start gloubal rules */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "open Sans", sans-serif;
+}
+.slider-container {
+  margin: 10px auto;
+  width: 800px;
+  height: 400px;
+  position: relative;
+}
+.slider-container img{
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.slider-container img.active {
+  opacity: 1;
+}
+.slider-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 6px;
+  z-index: 2;
+}
+
+
+.slider-controles {
+  width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-controles .prev,
+.slider-controles .next {
+  background-color: #009968;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px;
+  user-select: none;
+  width: 20%;
+}
+
+.slider-controles .prev.disabled,
+.slider-controles .next.disabled{
+  background-color: rgba(0, 150, 136, 0.5);
+  cursor: no-drop;
+
+}
+
+.slider-controles{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.slider-controles .indicator ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+.slider-controles .indicator ul li {
+  display: inline-block;
+  background-color: #f6f6f6;
+  color: #333;
+  font-weight: bold;
+  height: 28px;
+  width: 28px;
+  border-radius: 4px;
+  margin: 0 5px;
+  line-height: 28px;
+  cursor: pointer;
+  transition: .2s;
+}
+.slider-controles .indicator ul li:hover {
+  background-color: #999;
+  color: #333;
+}
+.slider-controles .indicator ul li.active {
+  background-color: #009688;
+  color: #fff;
+}
